@@ -1,0 +1,250 @@
+main {
+  width: 88%;
+  height: 500px;
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  margin: 0 auto;
+}
+
+.navAndSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  height: 470px;
+  margin-right: 5%;
+  position: relative;
+  box-shadow: 2px 2px 8px gray;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.skillsAnime {
+  position: relative;
+  width: 25%;
+  height: 470px;
+  box-shadow: 2px 2px 8px gray;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 15px;
+}
+
+.skillsAnimeContainer {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.skillsAnimeContainer.belt {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: anime 2s linear;
+}
+
+@keyframes anime {
+  0% {
+    opacity: 0%;
+    top: 70%;
+  }
+  50% {
+    opacity: 100%;
+    top: 60%;
+  }
+  100% {
+    opacity: 100%;
+    top: 50%;
+  }
+}
+
+aside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 60%;
+  height: 50px;
+  right: 0px;
+  top: 0;
+  border-top-right-radius: 15px;
+  overflow: hidden;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 90%;
+  font-family: "Lato", sans-serif;
+  height: 370px;
+  bottom: 10px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 100%;
+  opacity: 0%;
+}
+
+section.belt {
+  left: 50%;
+  top: 50%;
+  opacity: 100%;
+  transform: translate(-50%, -50%);
+  animation: anime2 1s linear;
+}
+
+@keyframes anime2 {
+  0% {
+    opacity: 0%;
+    top: 70%;
+  }
+  50% {
+    opacity: 20%;
+    top: 60%;
+  }
+
+  100% {
+    opacity: 100%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.myAbility {
+  visibility: hidden;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.myAbility.belt {
+  visibility: visible;
+}
+
+.myAbility div {
+  margin-top: 20px;
+}
+
+.fa-js-square {
+  font-size: 34px;
+  color: #efd81d;
+}
+
+.js {
+  width: 100%;
+}
+
+.js div {
+  display: flex;
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.js div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: goldenrod;
+  transition: 4s ease;
+}
+
+.myAbility.belt .js div span {
+  width: 40%;
+}
+
+.fa-html5 {
+  font-size: 34px;
+  color: #de4b25;
+}
+
+.html {
+  width: 100%;
+}
+
+.html div {
+  display: flex;
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.html div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #f16529;
+  transition: 4s ease;
+}
+
+.myAbility.belt .html div span {
+  width: 44%;
+}
+
+.fa-css3-alt {
+  font-size: 34px;
+  color: #2162af;
+}
+
+.css {
+  width: 100%;
+}
+
+.css div {
+  display: flex;
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.css div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #369cd6;
+  transition: 4s ease;
+}
+
+.myAbility.belt .css div span {
+  width: 44%;
+}
+
+.fa-react {
+  font-size: 34px;
+  color: #5ed3f3;
+}
+
+.react {
+  width: 100%;
+}
+
+.react div {
+  display: flex;
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.react div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #2daccf;
+  transition: 4s ease;
+}
+
+.myAbility.belt .react div span {
+  width: 40%;
+}

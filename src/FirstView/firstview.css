@@ -1,0 +1,47 @@
+:root {
+  --colorOne: black;
+  --colorTwo: white;
+}
+
+.firstView {
+  width: 100%;
+  position: absolute;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.firstView p {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: var(--colorTwo);
+  opacity: 90%;
+}
+
+.firstView span {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--colorTwo);
+}
+
+.firstWrapper {
+}
+
+.fa-arrow-down {
+  position: absolute;
+  font-size: 40px;
+  color: aliceblue;
+  left: 50%;
+  top: 92%;
+  transition: 0.3s;
+}
+
+.fa-arrow-down:hover {
+  transform: scale(1.1);
+}

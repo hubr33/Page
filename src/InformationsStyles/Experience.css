@@ -1,0 +1,35 @@
+.exp {
+  display: flex;
+  width: 80%;
+  height: 300px;
+  font-family: "Syne Mono", monospace;
+  border-radius: 4px;
+  color: black;
+  justify-content: space-evenly;
+}
+
+.job {
+  width: 50%;
+  height: 100%;
+  background-image: url("logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.aboutJob h2 {
+  padding: 10px;
+  text-align: center;
+}
+
+.one {
+  padding-right: 20px;
+}
+
+.tech {
+  margin-top: 20px;
+}
+
+.tech li {
+  line-height: 20px;
+}

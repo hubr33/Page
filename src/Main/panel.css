@@ -1,0 +1,17 @@
+.panelLi {
+  text-decoration: none;
+  text-transform: none;
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  transition: 0.2s;
+  color: black;
+  margin: 0 20px;
+}
+
+.panelLi.active {
+  font-weight: 700;
+}
+
+.panelLi:hover {
+  font-weight: 700;
+}

@@ -1,0 +1,1019 @@
+.portfolioWrapper {
+  width: 100%;
+  height: 220vh;
+  position: relative;
+  font-family: "Lato", sans-serif;
+  padding-top: 100px;
+}
+
+.leftBelt {
+  position: absolute;
+  height: calc(220vh + 630px);
+  width: 30px;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(220, 220, 220);
+}
+
+.rightBelt {
+  position: absolute;
+  height: calc(220vh + 630px);
+  width: 30px;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(220, 220, 220);
+}
+
+.container {
+  width: 88%;
+  height: 186vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 15px;
+  box-shadow: 2px 2px 8px gray;
+}
+
+@media (max-width: 1600px) {
+  .container {
+    height: 230vh;
+  }
+
+  .portfolioWrapper {
+    height: 240vh;
+  }
+
+  .leftBelt {
+    height: calc(240vh + 630px);
+  }
+  .rightBelt {
+    height: calc(240vh + 630px);
+  }
+}
+
+.projectInfo {
+  width: 20%;
+  max-height: 600px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 5%;
+}
+
+.projectInfo p {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.projectInfo h1 {
+  font-size: 33px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  margin-left: -40px;
+  text-transform: uppercase;
+  color: black;
+}
+
+.projectInfo p:nth-child(2) {
+  width: 100%;
+  height: 20%;
+}
+
+.projectInfo p:nth-child(2) span:nth-child(1) {
+  color: #efd81d;
+}
+
+.projectInfo p:nth-child(2) span:nth-child(2) {
+  color: #5ed3f3;
+}
+
+.projectLink {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* .projectLink div {
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  border: 1px solid black;
+} */
+
+:root {
+  --gd1-color1: #0483a0;
+  --gd1-color2: #dad373;
+
+  --gd2-color1: #a8ff78;
+  --gd2-color2: #78ffd6;
+
+  --gd3-color1: #f12711;
+  --gd3-color2: #f5af19;
+}
+
+.projectPanel {
+  width: 256px;
+  height: 400px;
+  position: relative;
+  margin-top: 10px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.projectPanel .shadow {
+  position: relative;
+  width: 240px;
+  height: 320px;
+  transition: 2s;
+  background-color: black;
+}
+
+.projectPanel:hover .card .content .image img {
+  opacity: 10%;
+}
+
+.card {
+  position: absolute;
+  width: 240px;
+  height: 320px;
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
+}
+
+.card p {
+  font-size: 32px;
+  font-family: "Lato", sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 105%;
+  font-weight: 900;
+  transform: translateX(-50%);
+}
+
+.card .content {
+  overflow: hidden;
+  border-radius: 20px;
+  height: 101%;
+}
+
+.card .image img {
+  display: block;
+  margin: auto;
+  filter: grayscale(0%) brightness(100%);
+  transition: 1s;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background-color: #fff;
+  border-radius: 20px;
+  z-index: -1;
+  transform: skew(1.5deg, 1.5deg);
+  background: linear-gradient(315deg, var(--gd1-color1), var(--gd1-color2));
+}
+
+.card:nth-child(2)::before {
+  background: linear-gradient(315deg, var(--gd2-color1), var(--gd2-color2));
+}
+
+.card:nth-child(3)::before {
+  background: linear-gradient(315deg, var(--gd3-color1), var(--gd3-color2));
+}
+
+.shadow a {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  font-weight: 900;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid white;
+  color: white;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  opacity: 0%;
+  transition: 0.3s;
+  padding: 6px 20px;
+}
+
+.shadow a:hover {
+  background-color: rgb(220, 220, 220);
+  color: black;
+}
+
+.projectPanel:hover .shadow a {
+  z-index: 1;
+  opacity: 50%;
+}
+
+/* ChatBox -------------------------------------------------------------------------------*/
+
+.jsPro {
+  position: absolute;
+  width: 70%;
+  left: -20%;
+  top: 66%;
+  transform: rotate(-90deg);
+  z-index: 0;
+}
+
+.jsPro div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.jsPro div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: goldenrod;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .jsPro div span {
+  width: 47.5%;
+}
+
+.htmlPro {
+  position: absolute;
+  width: 70%;
+  left: 10%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.htmlPro div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.htmlPro div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #f16529;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .htmlPro div span {
+  width: 14.9%;
+}
+
+.cssPro {
+  position: absolute;
+  width: 70%;
+  left: 40%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.cssPro div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.cssPro div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #2162af;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .cssPro div span {
+  width: 37.6%;
+}
+
+/* Exchanger ------------------------------------------------*/
+
+.jsPro2 {
+  position: absolute;
+  width: 70%;
+  left: -20%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.jsPro2 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.jsPro2 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: goldenrod;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .jsPro2 div span {
+  width: 52.3%;
+}
+
+.htmlPro2 {
+  position: absolute;
+  width: 70%;
+  left: 10%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.htmlPro2 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.htmlPro2 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #f16529;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .htmlPro2 div span {
+  width: 25.8%;
+}
+
+.cssPro2 {
+  position: absolute;
+  width: 70%;
+  left: 40%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.cssPro2 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.cssPro2 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #2162af;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .cssPro2 div span {
+  width: 21.9%;
+}
+
+/* MyNotes in React --------------------------------------------------------------*/
+
+.jsPro3 {
+  position: absolute;
+  width: 70%;
+  left: -20%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.jsPro3 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.jsPro3 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: goldenrod;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .jsPro3 div span {
+  width: 55.5%;
+}
+
+.htmlPro3 {
+  position: absolute;
+  width: 70%;
+  left: 10%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.htmlPro3 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.htmlPro3 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #f16529;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .htmlPro3 div span {
+  width: 17.9%;
+}
+
+.cssPro3 {
+  position: absolute;
+  width: 70%;
+  left: 40%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.cssPro3 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.cssPro3 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #2162af;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .cssPro3 div span {
+  width: 26.6%;
+}
+
+/* OneHand Bandit -------------------------------------------------------------------*/
+
+.jsPro4 {
+  position: absolute;
+  width: 70%;
+  left: -20%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.jsPro4 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.jsPro4 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: goldenrod;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .jsPro4 div span {
+  width: 50%;
+}
+
+.htmlPro4 {
+  position: absolute;
+  width: 70%;
+  left: 10%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.htmlPro4 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.htmlPro4 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #f16529;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .htmlPro4 div span {
+  width: 25%;
+}
+
+.cssPro4 {
+  position: absolute;
+  width: 70%;
+  left: 40%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.cssPro4 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.cssPro4 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #2162af;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .cssPro4 div span {
+  width: 25%;
+}
+
+/*Timer ---------------------------------------------------------------*/
+
+.jsPro5 {
+  position: absolute;
+  width: 70%;
+  left: -20%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.jsPro5 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.jsPro5 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: goldenrod;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .jsPro5 div span {
+  width: 50%;
+}
+
+.htmlPro5 {
+  position: absolute;
+  width: 70%;
+  left: 10%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.htmlPro5 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.htmlPro5 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #f16529;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .htmlPro5 div span {
+  width: 20%;
+}
+
+.cssPro5 {
+  position: absolute;
+  width: 70%;
+  left: 40%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.cssPro5 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.cssPro5 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #2162af;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .cssPro5 div span {
+  width: 30%;
+}
+
+/* Clock ----------------------------------------------------------------------------*/
+
+.jsPro6 {
+  position: absolute;
+  width: 70%;
+  left: -20%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.jsPro6 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.jsPro6 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: goldenrod;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .jsPro6 div span {
+  width: 33%;
+}
+
+.htmlPro6 {
+  position: absolute;
+  width: 70%;
+  left: 10%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.htmlPro6 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.htmlPro6 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #f16529;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .htmlPro6 div span {
+  width: 17%;
+}
+
+.cssPro6 {
+  position: absolute;
+  width: 70%;
+  left: 40%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.cssPro6 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.cssPro6 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #2162af;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .cssPro6 div span {
+  width: 50%;
+}
+
+/* Walidator -------------------*/
+
+.jsPro7 {
+  position: absolute;
+  width: 70%;
+  left: -20%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.jsPro7 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.jsPro7 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: goldenrod;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .jsPro7 div span {
+  width: 30.1%;
+}
+
+.htmlPro7 {
+  position: absolute;
+  width: 70%;
+  left: 10%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.htmlPro7 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.htmlPro7 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #f16529;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .htmlPro7 div span {
+  width: 26.5%;
+}
+
+.cssPro7 {
+  position: absolute;
+  width: 70%;
+  left: 40%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.cssPro7 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.cssPro7 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #2162af;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .cssPro7 div span {
+  width: 43.3%;
+}
+
+/*MyNotes JS ----------------------------------------------------------*/
+
+.jsPro8 {
+  position: absolute;
+  width: 70%;
+  left: -20%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.jsPro8 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.jsPro8 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: goldenrod;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .jsPro8 div span {
+  width: 31.5%;
+}
+
+.htmlPro8 {
+  position: absolute;
+  width: 70%;
+  left: 10%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.htmlPro8 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.htmlPro8 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #f16529;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .htmlPro8 div span {
+  width: 20.8%;
+}
+
+.cssPro8 {
+  position: absolute;
+  width: 70%;
+  left: 40%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.cssPro8 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.cssPro8 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #2162af;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .cssPro8 div span {
+  width: 47.7%;
+}
+
+/*Scissors game ----------------------------------------------*/
+
+.jsPro9 {
+  position: absolute;
+  width: 70%;
+  left: -20%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.jsPro9 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.jsPro9 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: goldenrod;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .jsPro9 div span {
+  width: 53.7%;
+}
+
+.htmlPro9 {
+  position: absolute;
+  width: 70%;
+  left: 10%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.htmlPro9 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.htmlPro9 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #f16529;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .htmlPro9 div span {
+  width: 25.9%;
+}
+
+.cssPro9 {
+  position: absolute;
+  width: 70%;
+  left: 40%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.cssPro9 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.cssPro9 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #2162af;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .cssPro9 div span {
+  width: 20.4%;
+}
+
+/*ToDo App -------------------------------------------------*/
+
+.jsPro10 {
+  position: absolute;
+  width: 70%;
+  left: -20%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.jsPro10 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.jsPro10 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: goldenrod;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .jsPro10 div span {
+  width: 38.3%;
+}
+
+.htmlPro10 {
+  position: absolute;
+  width: 70%;
+  left: 10%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.htmlPro10 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.htmlPro10 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #f16529;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .htmlPro10 div span {
+  width: 18.3%;
+}
+
+.cssPro10 {
+  position: absolute;
+  width: 70%;
+  left: 40%;
+  top: 66%;
+  transform: rotate(-90deg);
+}
+
+.cssPro10 div {
+  width: 100%;
+  height: 3px;
+  background-color: #373737;
+}
+
+.cssPro10 div span {
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #2162af;
+  transition: 1s 1s ease;
+}
+
+.projectPanel:hover .cssPro10 div span {
+  width: 43.4%;
+}
